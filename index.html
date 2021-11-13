@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Technical Documentation</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<nav id="navbar">
+  <header>Java Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li>
+      <a class="nav-link" href="#Java_Syntax"
+        >Java Syntax</a
+      >
+    </li>
+    <li>
+      <a class="nav-link" href="#Java_Comments">Java Comments</a>
+    </li>
+    <li><a class="nav-link" href="#Java_Variables">Java Variables</a></li>
+    <li><a class="nav-link" href="#Java_Type_Casting">Java Type Casting</a></li>
+    <li>
+      <a class="nav-link" href="#Java_Booleans">Java Booleans</a>
+    </li>
+    <li><a class="nav-link" href="#Java_Switch">Java Switch</a></li>
+    <li><a class="nav-link"
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header><h2>Introduction</h2></header>
+    <article>
+      <h2>What is Java?</h2>
+      <p>
+        Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers write once, run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture.
+      </p>
+        It is used for:
+      </p>
+      <ul>
+        <li>
+          Mobile applications (specially Android apps)
+        </li>
+        <li>
+          Desktop applications
+        </li>
+        <li>Web applications</li>
+        <li>Web servers and application servers</li>
+        <li>Games</li>
+        <li>Database connection</li>
+        <li>And much, much more!</li>
+        
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="Java_Syntax">
+    <header><h2>Java Syntax</h2></header>
+    <article>
+      <h2>Syntax</h2>
+      <p>We used the following code to print "Hello World" to the screen:
+      <code>public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+}
+        </code>
+     
+      </p>
+      <p>Example explained
+every line of code that runs in Java must be inside a class. In our example, we named the class Main. A class should always start with an uppercase first letter.
+
+Note: Java is case-sensitive: "MyClass" and "myclass" has different meaning.</p>
+      <h2>Main Method</h2>
+      <p>
+        The main() method is required and you will see it in every Java program:
+        <code>public static void main(String[] args)</code>
+      </p>
+      <h2>System.out.println</h2>
+      <p>Inside the main() method, we can use the println() method to print a line of text to the screen:
+        <code>public static void main(String[] args) {
+  System.out.println("Hello World");
+}</code>
+        Note: The curly braces {} marks the beginning and the end of a block of code.<br>
+
+Note: Each code statement must end with a semicolon.
+          
+        </p>         
+    </article>
+  </section>
+  <section class="main-section" id="Java_Comments">
+    <header><h2>Java Comments</h2></header>
+    <article>
+       <h2>Comments</h2>
+      <p>
+       Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.
+      </p>
+   <h2>Single-line Comments</h2>
+      <p>Single-line comments start with two forward slashes (//).Any text between // and the end of the line is ignored by Java (will not be executed).<br>
+This example uses a single-line comment before a line of code:
+        <code>// This is a comment
+System.out.println("Hello World");
+</code>
+      </p>
+      This example uses a single-line comment at the end of a line of code:
+      <code>System.out.println("Hello World"); // This is a comment</code>
+      <h2>Multi-line Comments</h2>
+      <p>Multi-line comments start with /* and ends with */.Any text between /* and */ will be ignored by Java.<br>
+This example uses a multi-line comment (a comment block) to explain the code:
+        <code>/* The code below will print the words Hello World
+to the screen, and it is amazing */
+System.out.println("Hello World");</code>
+       
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Java_Variables">
+    <header>Java Variables</header>
+    <article>
+      <h2>Variables</h2>
+      <p>Variables are containers for storing data values.<br>
+In Java, there are different types of variables, for example:
+      <ul>
+        <li>String - stores text, such as "Hello". String values are surrounded by double quotes</li>
+        <li>String - stores text, such as "Hello". String values are surrounded by double quotes</li>
+        <li>float - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+        <li>char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+        <li>boolean - stores values with two states: true or false</li>
+      </ul>
+      </p>
+      
+
+      
+    </article>
+  </section>
+  <section class="main-section" id="Java_Type_Casting">
+    <header><h2>Java Type Casting</h2></header>
+    <article>
+      <h2>Type Casting</h2>
+    <p>Type casting is when you assign a value of one primitive data type to another type.<br>
+      In Java, there are two types of casting:
+      <ul>
+        <li>Widening Casting (automatically) - converting a smaller type to a larger type size
+byte -> short -> char -> int -> long -> float -> double
+</li>
+        <li>Narrowing Casting (manually) - converting a larger type to a smaller size type
+double -> float -> long -> int -> char -> short -> byte</li>
+      </ul>
+      
+ </p>
+    <h2>Widening casting</h2>
+    <p>Widening casting is done automatically when passing a smaller size type to a larger size type:
+      <code>public class Main {
+  public static void main(String[] args) {
+    int myInt = 9;
+    double myDouble = myInt; // Automatic casting: int to double
+
+    System.out.println(myInt);      // Outputs 9
+    System.out.println(myDouble);   // Outputs 9.0
+  }
+}</code>
+    </p>
+    <h2>Narrowing Casting</h2>
+    <p>
+      Narrowing casting must be done manually by placing the type in parentheses in front of the value:
+      <code>public class Main {
+  public static void main(String[] args) {
+    double myDouble = 9.78d;
+    int myInt = (int) myDouble; // Manual casting: double to int
+
+    System.out.println(myDouble);   // Outputs 9.78
+    System.out.println(myInt);      // Outputs 9
+  }
+}</code>
+    </p>
+    </article>
+  </section>
+  <section class="main-section" id="Java_Booleans">
+    <header><h2>Java Booleans</h2></header>
+    <article>
+      <h2>Booleans</h2>
+      <p>
+        Very often, in programming, you will need a data type that can only have one of two values, like:
+      <ul>
+        <li>YES / NO</li>
+        <li>ON / OFF</li>
+        <li>TRUE / FALSE</li>
+      </ul>
+      For this, Java has a boolean data type, which can take the values true or false.
+      </p>
+    <h2>Boolean Values</h2>
+      <p>A boolean type is declared with the boolean keyword and can only take the values true or false:
+        <code>boolean isJavaFun = true;
+boolean isFishTasty = false;
+System.out.println(isJavaFun);     // Outputs true
+System.out.println(isFishTasty);   // Outputs false</code>
+        
+      </p>
+    <h2>Boolean expression</h2>
+      <p>A Boolean expression is a Java expression that returns a Boolean value: true or false.<br>
+You can use a comparison operator, such as the greater than (>) operator to find out if an expression (or a variable) is true:
+        <code>int x = 10;
+int y = 9;
+System.out.println(x > y); // returns true, because 10 is higher than 9</code>
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Java_Switch">
+    <header><h2>Java Switch</h2></header>
+    <article>
+      <h2>Switch Statements</h2>
+      <p>Use the switch statement to select one of many code blocks to be executed.<br>
+        This is how it works:
+      <ul>
+        <li>The switch expression is evaluated once.</li>
+        <li>The value of the expression is compared with the values of each case.</li>
+        <li>If there is a match, the associated block of code is executed.</li>
+        <li>The break and default keywords are optional, and will be described later in this chapter</li>
+      </ul>
+      The example below uses the weekday number to calculate the weekday name:
+      <code>int day = 4;
+switch (day) {
+  case 1:
+    System.out.println("Monday");
+    break;
+  case 2:
+    System.out.println("Tuesday");
+    break;
+  case 3:
+    System.out.println("Wednesday");
+    break;
+  case 4:
+    System.out.println("Thursday");
+    break;
+  case 5:
+    System.out.println("Friday");
+    break;
+  case 6:
+    System.out.println("Saturday");
+    break;
+  case 7:
+    System.out.println("Sunday");
+    break;
+}
+// Outputs "Thursday" (day 4)
+      </code>      
+      </p>
+    <h2>Break Keyword</h2>
+    <p>When Java reaches a break keyword, it breaks out of the switch block.<br>
+This will stop the execution of more code and case testing inside the block.<br>
+When a match is found, and the job is done, it's time for a break. There is no need for more testing.</p>
+    <h2>Default Keyword</h2>
+      <p>The default keyword specifies some code to run if there is no case match:
+       <code>int day = 4;
+switch (day) {
+  case 6:
+    System.out.println("Today is Saturday");
+    break;
+  case 7:
+    System.out.println("Today is Sunday");
+    break;
+  default:
+    System.out.println("Looking forward to the Weekend");
+}
+         // Outputs "Looking forward to the Weekend"</code>
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from
+          <a
+            href="https://www.w3schools.com/java/default.asp"
+            target="_blank"
+            >w3school</a
+          >
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+
+
+</body>
+</html>
